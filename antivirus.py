@@ -1,6 +1,6 @@
 import os
 import hashlib
-import pydeep 
+import httplib2
 
 def calculate_hash(file_path):
     with open(file_path, 'rb') as file:
@@ -21,8 +21,9 @@ def scan_directory(directory_path):
             file_path = os.path.join(root, file)
             if scan_file(file_path):
                 print(f"Malware detected in file: {file_path}")
+
 def main():
-    directory_path = "/home/diegorego/malware"
+    directory_path = input("Enter directory path: ")
     scan_directory(directory_path)
 
 if __name__ == "__main__":
